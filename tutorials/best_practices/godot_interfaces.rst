@@ -311,6 +311,9 @@ accesses:
 
       // C# is a static language, so it has no dynamic symbol access, e.g.
       // `GetParent().Visible = false` won't work.
+      // However, it is possible to use C# generics or even casting to get
+      // the type you want.
+      GetParent<CanvasItem>().Visible = false // works !
 
 - A method check. In the case of
   :ref:`CanvasItem.visible <class_CanvasItem_property_visible>`, one can
